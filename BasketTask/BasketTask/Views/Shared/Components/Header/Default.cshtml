@@ -1,0 +1,353 @@
+﻿@using BasketTask.ViewModels
+@model LayoutVM
+
+<header>
+    <div class="row">
+        <div class="col-xl-12 d-sm-none d-xl-block">
+            <div class="warning-alert">
+                <P>Due to the <strong>COVID 19</strong> epidemic, orders may be processed with a slight delay</P>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-menu d-flex">
+            <div class="links-about">
+                <a href="./about.html">About Us</a>
+                <a href="#">My account</a>
+                <a href="#">Wishlist</a>
+                <a href="#">Order Tracking</a>
+            </div>
+            <div class="menus-about d-flex justify-content-between">
+                <span>
+                    <img src="https://img.icons8.com/ios/50/000000/hand.png" /> 100% Secure delivery without
+                    contacting the courier
+                </span>
+                <div class="vl"></div>
+                <span class="help">Need help? Call us: <strong><a href="">@Model.Settings["Phone"]</a></strong></span>
+                <div class="vl"></div>
+                <div class="menus-dropdowns">
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            English <img src="https://img.icons8.com/material-outlined/24/000000/expand-arrow--v1.png" />
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">English</a>
+                            <a href="#">Spanish</a>
+                            <a href="#">German</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            USD <img src="https://img.icons8.com/material-outlined/24/000000/expand-arrow--v1.png" />
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">USD</a>
+                            <a href="#">INR</a>
+                            <a href="#">GBP</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-2 col-6">
+                <div class="logo-wrapper">
+                    <a href="">
+                        <img src="@Model.Settings["HeaderLogo"]"
+                             alt=""><br><span>Online Grocery Shopping Center</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-2 col-6">
+                <div class="location-wrapper">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn-modal btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                        <span>Your Location</span> <i class="fa-solid fa-angle-down"></i><br>
+                        <strong>Select a location</strong>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <p id="staticBackdropLabel" class="modal-title">
+                                        <strong>
+                                            Choose your Delivery
+                                            Location
+                                        </strong>
+                                        <br>
+                                        Enter your address and we will specify the offer for your area.
+                                    </p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modals-search">
+                                        <i class="fa-solid fa-magnifying-glass"></i><input class="search ps-1"
+                                                                                           style="width: 95%; margin-bottom: 10px; border: none;"
+                                                                                           placeholder="Search your area" type="search">
+                                    </div>
+                                    <ul>
+                                        <li class="list-group-item">Select a Location <span>Clear All</span> </li>
+                                        <li class="list-group-item">Alabama <span>Min:130$</span> </li>
+                                        <li class="list-group-item">Albania <span>Min:120$</span></li>
+                                        <li class="list-group-item">New Zelland <span>Min:90$</span> </li>
+                                        <li class="list-group-item">Azerbaijan <span>Min:150$</span> </li>
+                                        <li class="list-group-item">Alabama <span>Min:130$</span> </li>
+                                        <li class="list-group-item">Albania <span>Min:120$</span></li>
+                                        <li class="list-group-item">New Zelland <span>Min:90$</span> </li>
+                                        <li class="list-group-item">Azerbaijan <span>Min:150$</span> </li>
+                                        <li class="list-group-item">Alabama <span>Min:130$</span> </li>
+                                        <li class="list-group-item">Albania <span>Min:120$</span></li>
+                                        <li class="list-group-item">New Zelland <span>Min:90$</span> </li>
+                                        <li class="list-group-item">Azerbaijan <span>Min:150$</span> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-8">
+                <div class="search-wrapper d-flex justify-content-between">
+                    <input class="search" type="search" placeholder="Search for products...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </div>
+            <div class="col-xl-2 col-4">
+                <div class="profile-busket d-flex">
+                    <div class="profile"><a href="./login-register.html"><i class="fa-solid fa-user"></i></a></div>
+                    <div class="busket-wrapper d-flex">
+                        <span>$0.00</span>
+                        <a href="./cart.html" style="text-decoration: none;">
+                            <div class="busket-dropdown">
+                                <div class="busket-btn">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </div><sub>
+                                    <div class="sub"><b>0</b></div>
+                                </sub>
+                                <div class="busket-content">
+                                    <img src="https://img.icons8.com/bubbles/50/000000/shopping-bag.png" />
+                                    <p class="first">No products in the cart.</p>
+                                    <hr>
+                                    <p>We reduce shipping prices to only 2.49€!</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-3 col-5">
+                <div class="all-categories">
+                    <div class="all-categories-btn-content">
+                        <div class="all-categories-btn">
+                            <p>☰ ALL CATEGORIES <i class="fa-solid fa-angle-down"></i></p>
+                        </div>
+                        <div class="products-count">
+                            <p>TOTAL 63 PRODUCTS</p>
+                        </div>
+                    </div>
+                    <div class="all-categories-content">
+                        <div class="fruits-vegetables">
+                            <div class="fruits-vegetables-btn">
+                                <p>
+                                    <i class="fa-solid fa-apple-whole"></i> Fruits & Vegetables <i class="fa-solid fa-angle-right"></i>
+                                </p>
+                            </div>
+                            <div class="fruits-vegetables-content">
+                                @foreach (var item in Model.CategoryProducts)
+                                {
+                                    if (item.CategoriesId == 1)
+                                    {
+                                        <p>@item.Name</p>
+                                    }
+
+                                }
+
+
+                            </div>
+                        </div>
+                        <div class="meats-seafood">
+                            <div class="meats-seafood-btn">
+                                <p><i class="fa-solid fa-drumstick-bite"></i> Meats & Seafood</p>
+                            </div>
+                        </div>
+                        <div class="breakfast-dairy">
+                            <div class="breakfast-dairy-btn">
+                                <p><i class="fa-solid fa-egg"></i> Breakfast & Dairy</p>
+                            </div>
+                        </div>
+                        <div class="beverages">
+                            <div class="beverages-btn">
+                                <p>
+                                    <i class="fa-solid fa-mug-hot"></i> Beverages <i class="fa-solid fa-angle-right"></i>
+                                </p>
+                            </div>
+                            <div class="beverages-content">
+                                @foreach (var item in Model.CategoryProducts)
+                                {
+                                    if (item.CategoriesId == 4)
+                                    {
+                                        <p>@item.Name</p>
+                                    }
+
+                                }
+                            </div>
+                        </div>
+                        <div class="breads-bakery">
+                            <div class="breads-bakery-btn">
+                                <p><i class="fa-solid fa-bread-slice"></i> Breads & Bakery</p>
+                            </div>
+                        </div>
+                        <div class="frozen-foods">
+                            <div class="frozen-foods-btn">
+                                <p><i class="fa-solid fa-snowflake"></i> Frozen Foods</p>
+                            </div>
+                        </div>
+                        <div class="biscuits-snacks">
+                            <div class="biscuits-snacks-btn">
+                                <p><i class="fa-solid fa-cookie"></i> Biscuits & Snacks</p>
+                            </div>
+                        </div>
+                        <div class="grocery-staples">
+                            <div class="grocery-staples-btn">
+                                <p><i class="fa-solid fa-leaf"></i> Grocery & Staples</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="value-day-btn">
+                            <p>Value of the Day</p>
+                        </div>
+                        <div class="top-offers">
+                            <p>Top 100 Offers</p>
+                        </div>
+                        <div class="arrivals">
+                            <p>New Arrivals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-1 col-2">
+                <div class="home-page-wrapper">
+                    <div class="home-page">
+                        <a href="./home.html">HOME <i class="fa-solid fa-angle-down"></i></a>
+                    </div>
+                    <div class="home-page-content">
+                        <a href="./home.html">Home 1</a><br>
+                        <a href="">Home 2</a><br>
+                        <a href="">Home 3</a><br>
+                        <a href="">Home 4</a><br>
+                        <a href="">Home 5</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-1 col-2">
+                <div class="shop-page-wrapper">
+                    <div class="shop-page">
+                        <a href="./shop.html">SHOP <i class="fa-solid fa-angle-down"></i></a>
+                    </div>
+                    <div class="shop-page-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="shop-lists">
+                                        <a class="first" href="">Shop Lists</a><br>
+                                        <a href="">Shop Default</a><br>
+                                        <a href="">Shop Right Sidebar</a><br>
+                                        <a href="">Shop Wide</a><br>
+                                        <a href="">List Left Sidebar</a><br>
+                                        <a href="">Load More Button</a><br>
+                                        <a href="">Infinite Scrolling</a>
+                                    </div>
+                                </div>
+                                <div class="col-2 ms-5">
+                                    <div class="product-detail">
+                                        <a class="first" href="">Product Detail</a><br>
+                                        <a href="">Product Default</a><br>
+                                        <a href="">Product Variable</a><br>
+                                        <a href="">Product Grouped</a><br>
+                                        <a href="">Product External</a><br>
+                                        <a href="">Product Downloadable</a><br>
+                                        <a href="">Product With Video</a>
+                                    </div>
+                                </div>
+                                <div class="col-2 ms-5">
+                                    <div class="product-types">
+                                        <a class="first" href="">Product Types</a><br>
+                                        <a href="">Single Type 1</a><br>
+                                        <a href="">Single Type 2</a><br>
+                                        <a href="">Single Type 3</a><br>
+                                        <a href="">Single Type 4</a><br>
+                                        <a href="">Thumbnails Left</a><br>
+                                        <a href="">Zoom Image</a>
+                                    </div>
+                                </div>
+                                <div class="col-2 ms-5">
+                                    <div class="shop-pages">
+                                        <a class="first" href="">Shop Pages</a><br>
+                                        <a href="">Cart</a><br>
+                                        <a href="">Checkout</a><br>
+                                        <a href="">My account</a><br>
+                                        <a href="">Wishlist</a><br>
+                                        <a href="">Order Tracking</a><br>
+                                        <a href="">Order on WhatsApp</a>
+                                    </div>
+                                </div>
+                                <div class="col-2 ms-5">
+                                    <div class="shop-layouts">
+                                        <a class="first" href="">Shop Layouts</a><br>
+                                        <a href="">Two Columns</a><br>
+                                        <a href="">Three Columns</a><br>
+                                        <a href="">Three Columns Wide</a><br>
+                                        <a href="">Four Columns</a><br>
+                                        <a href="">Four Columns Wide</a><br>
+                                        <a href="">Five Columns Wide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-3">
+                <div class="meats-seafood-pages">
+                    <a href="./product-detail.html"><i class="fa-solid fa-drumstick-bite"></i> MEATS & SEAFOOD</a>
+                </div>
+            </div>
+            <div class="col-xl-1 col-2">
+                <div class="bakery-page">
+                    <a href=""><i class="fa-solid fa-bread-slice"></i> BAKERY</a>
+                </div>
+            </div>
+            <div class="col-xl-2 col-3">
+                <div class="beverages-page">
+                    <a href=""><i class="fa-solid fa-mug-hot"></i> BEVERAGES</a>
+                </div>
+            </div>
+            <div class="col-xl-1 col-2">
+                <div class="blog-page">
+                    <a href="./blog.html">BLOG</a>
+                </div>
+            </div>
+            <div class="col-xl-1 col-2">
+                <div class="contact-page">
+                    <a href="./contact.html">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</header>

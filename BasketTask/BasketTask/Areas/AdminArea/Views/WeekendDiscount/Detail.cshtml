@@ -1,0 +1,15 @@
+﻿@model WeekendDiscount
+@{
+    ViewData["Title"] = "Weekend Discount detail";
+}
+
+<div class="container mt-5">
+    <h4>Weekend Discount</h4>
+    <img src="~/assets/img/@Model.Images" alt="" />
+    <p><b>Name:</b> @Model.Name</p>
+    <p><b>Discount text:</b> @Model.Discount</p>
+    <p><b>Description:</b> @Model.Decription</p>
+    <div>
+        <a asp-action="Index" class="btn btn-primary">Go back</a>
+    </div>
+</div>
